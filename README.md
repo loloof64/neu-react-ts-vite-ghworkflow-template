@@ -1,0 +1,47 @@
+# Neutralinojs + React + TS + Vite + Github Workflow template
+
+A template for [NeutralinoJS](https://neutralino.js.org/), [ReactJS](https://react.dev/), [Typescript](https://www.typescriptlang.org/), and Github Workflow.
+So that you can also release you application on Github for Windows and Linux (needs manual trigger).
+
+## Instructions
+
+### Install
+
+1. `npm i -g @neutralinojs/neu` (skip if `neu` is already installed)
+2. `neu update` (to create bin folder and download binaries)
+3. `cd react-src && npm install && cd ../`
+4. `npm run dev`
+
+### Run
+
+```
+npm run dev
+```
+
+it's an alias to `neu run -- --window-enable-inspector`
+
+### Build
+
+```
+npm run build
+```
+
+it's an alias to `neu build`
+
+### Build + zip
+
+```
+neu build --release
+```
+
+## Update
+
+1. Update the config file:
+
+- option `cli.binaryVersion` with X.X.X
+- option `cli.clientVersion` with X.X.X
+
+Enter `neu update` to fetch this version.
+
+2. Update client library into `react-src`:
+   `npm install @neutralinojs/lib@latest`
