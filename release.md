@@ -1,3 +1,6 @@
-# First release
+# Add other artifacts
 
-First release
+Add artifacts
+
+- deb
+- rpm
