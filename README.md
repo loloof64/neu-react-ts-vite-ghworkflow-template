@@ -59,3 +59,5 @@ Enter `neu update` to fetch this version.
 
 - Also update `env` data inside the **release-all-platforms.yml** file
 - and in **build automation/template.iss**
+
+- and finally, set message in release.md
