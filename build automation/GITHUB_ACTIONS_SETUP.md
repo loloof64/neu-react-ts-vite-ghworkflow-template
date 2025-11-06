@@ -79,7 +79,7 @@ git push origin v1.0.1
 
 ### Windows
 
-- **File**: `SimpleChess-Windows64_Installer.exe`
+- **File**: `SampleApp-Windows64_Installer.exe`
 - **Type**: Inno Setup installer
 - **Architecture**: x64
 - **Features**: Start menu shortcuts, desktop icon, uninstaller

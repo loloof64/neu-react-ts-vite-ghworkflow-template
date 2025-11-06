@@ -52,9 +52,10 @@ Enter `neu update` to fetch this version.
 
 - Don't forget to customize your GH Action settings, changing parameters in the file **neutralino.config.json**
 
-   * applicationId
-   * version
-   * buildscript section
-   * cli.applicationName
+  - applicationId
+  - version
+  - buildscript section
+  - cli.applicationName
 
-- Also update `env` data inside the **release-all-platforms.yml** file.
+- Also update `env` data inside the **release-all-platforms.yml** file
+- and in **build automation/template.iss**

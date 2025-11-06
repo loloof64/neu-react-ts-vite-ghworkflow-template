@@ -7,7 +7,7 @@
 # This is called from build-linux.sh before packages are built.
 # Use this to prepare platform specific resources.
 #
-# Template Linux preprocessing script for SimpleChess
+# Template Linux preprocessing script for SampleApp
 
 if [ "$APP_ARCH" = "x64" ]; then
     :   
