@@ -170,7 +170,7 @@ jobs:
       - name: Build Linux packages
         run: |
           chmod +x "${{ env.BUILD_AUTOMATION_PATH }}/${{ env.LINUX_BUILD_SCRIPT }}"
-          "./${{ env.BUILD_AUTOMATION_PATH }}/${{ env.LINUX_BUILD_SCRIPT }}" --appimage --deb --rpm
+          "./${{ env.BUILD_AUTOMATION_PATH }}/${{ env.LINUX_BUILD_SCRIPT }}" --all
 
       - name: Upload Linux builds
         uses: actions/upload-artifact@v4

@@ -18,9 +18,46 @@
 VERSION='1.1.0'
 OS=$(uname -s)
 
-CREATE_APPIMAGE=true
+CREATE_APPIMAGE=false
 CREATE_DEB=false
 CREATE_RPM=false
+
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        --appimage)
+            CREATE_APPIMAGE=true
+            shift
+            ;;
+        --deb)
+            CREATE_DEB=true
+            shift
+            ;;
+        --rpm)
+            CREATE_RPM=true
+            shift
+            ;;
+        --all)
+            CREATE_APPIMAGE=true
+            CREATE_DEB=true
+            CREATE_RPM=true
+            shift
+            ;;
+        --test)
+            TEST_MODE=true
+            shift
+            ;;
+        *)
+            echo "Unknown option: $1"
+            echo "Usage: $0 [--appimage] [--deb] [--rpm] [--all] [--test]"
+            exit 1
+            ;;
+    esac
+done
+
+# If no packaging options specified, create AppImage by default
+if [ "$CREATE_APPIMAGE" = false ] && [ "$CREATE_DEB" = false ] && [ "$CREATE_RPM" = false ]; then
+    CREATE_APPIMAGE=true
+fi
 
 echo
 echo -e "\033[1mEnhanced Neutralino BuildScript for Linux platform, version ${VERSION}\033[0m"
