@@ -44,7 +44,7 @@ APP_VERSION=$(jq -r '.version' ${CONF})
 APP_BINARY=$(jq -r '.cli.binaryName' ${CONF})
 APP_NAME=$(jq -r '.buildScript.linux.appName' ${CONF})
 APP_ICON=$(jq -r '.buildScript.linux.appIcon' ${CONF})
-APP_CATEGORIES=$(jq -r '.buildScript.linux.appCategories' // "Utility" ${CONF})
+APP_CATEGORIES=$(jq -r '.buildScript.linux.appCategories // "Utility"' ${CONF})
 APP_PUBLISHER=$(jq -r '.buildScript.linux.appPublisher // "Publisher Name"' ${CONF})
 APP_DESCRIPTION=$(jq -r '.buildScript.linux.appDescription // "Your application Description Goes here."' ${CONF})
 
