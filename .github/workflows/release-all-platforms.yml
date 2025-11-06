@@ -14,11 +14,10 @@ permissions:
 env:
   APP_NAME: "SampleApp"
   APP_BINARY_NAME: "SampleApp"
-  APP_VERSION: "0.0.6"
+  APP_VERSION: "0.0.7"
   PUBLISHER: "Laurent Bernabe"
   BUILD_AUTOMATION_PATH: "build automation"
   INSTALLER_SCRIPT: "template.iss"
-  INSTALLER_EXE: "SampleApp-Windows64_Installer.exe"
   MAC_BUILD_SCRIPT: "build-macos.sh"
   LINUX_BUILD_SCRIPT: "build-linux.sh"
 
@@ -100,7 +99,7 @@ jobs:
           & "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" "$env:BUILD_AUTOMATION_PATH/$env:INSTALLER_SCRIPT"
 
           # Verify installer was created
-          $installerFile = "Output/$env:INSTALLER_EXE"
+          $installerFile = "Output/SampleApp-${{ env.APP_VERSION }}-Windows64_Installer.exe"
           if (-not (Test-Path $installerFile)) {
             throw "Installer file not found: $installerFile"
           }
@@ -112,7 +111,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: windows-installer
-          path: Output/${{ env.INSTALLER_EXE }}
+          path: Output/SampleApp-${{ env.APP_VERSION }}-Windows64_Installer.exe
           retention-days: 7
 
   build-linux:

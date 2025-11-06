@@ -1,3 +1,3 @@
-# Fix missing rpm artifact
+# Set windows executable with a dynamic name
 
-Fix missing rpm artifact for x64
+Set windows executable with a dynamic name, including version number.

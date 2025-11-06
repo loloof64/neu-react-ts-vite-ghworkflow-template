@@ -1,6 +1,6 @@
 {
   "applicationId": "neutralinojs.react.ts.vite.ghaction.template",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "defaultMode": "window",
   "documentRoot": "/react-src/build/",
   "url": "/",
