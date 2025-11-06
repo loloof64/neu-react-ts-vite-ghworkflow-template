@@ -1,3 +1,3 @@
-# Add other artifacts
+# Fix missing rpm artifact
 
-Add rpm artifacts
+Fix missing rpm artifact for x64

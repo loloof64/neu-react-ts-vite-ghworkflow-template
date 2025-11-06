@@ -268,7 +268,15 @@ EOF
 # Function to create RPM package
 create_rpm_package() {
     local app_arch="$1"
+    local deb_arch="" 
     local rpm_arch=""
+
+    case "$app_arch" in
+        "x64") deb_arch="amd64" ;;
+        "arm64") deb_arch="arm64" ;;
+        "armhf") deb_arch="armhf" ;;
+        *) deb_arch="amd64" ;;
+    esac
     
     case "$app_arch" in
         "x64") rpm_arch="x86_64" ;;
@@ -360,9 +368,9 @@ fi
 EOF
     
     # Try to build RPM using alien (converts from DEB)
-    if command -v alien >/dev/null 2>&1 && [ -f "dist/linux_${app_arch}/${APP_NAME}-${APP_VERSION}-${app_arch}.deb" ]; then
+    if command -v alien >/dev/null 2>&1 && [ -f "dist/linux_${app_arch}/${APP_NAME}-${APP_VERSION}-${deb_arch}.deb" ]; then
         cd "dist/linux_${app_arch}"
-        alien --to-rpm "${APP_NAME}-${APP_VERSION}-${app_arch}.deb"
+        alien --to-rpm "${APP_NAME}-${APP_VERSION}-${deb_arch}.deb"
         cd - >/dev/null
         echo "  ✓ RPM package created using alien"
     else

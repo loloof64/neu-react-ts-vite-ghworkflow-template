@@ -14,7 +14,7 @@ permissions:
 env:
   APP_NAME: "SampleApp"
   APP_BINARY_NAME: "SampleApp"
-  APP_VERSION: "0.0.5"
+  APP_VERSION: "0.0.6"
   PUBLISHER: "Laurent Bernabe"
   BUILD_AUTOMATION_PATH: "build automation"
   INSTALLER_SCRIPT: "template.iss"
