@@ -47,3 +47,14 @@ Enter `neu update` to fetch this version.
 
 2. Update client library into `react-src`:
    `npm install @neutralinojs/lib@latest`
+
+## Update for Github Action
+
+- Don't forget to customize your GH Action settings, changing parameters in the file **neutralino.config.json**
+
+* applicationId
+* version
+* buildscript section
+* cli.applicationName
+
+- Also update `env` data inside the **release-all-platforms.yml** file.

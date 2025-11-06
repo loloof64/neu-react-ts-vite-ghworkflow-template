@@ -34,7 +34,7 @@
     }
   },
   "cli": {
-    "binaryName": "application",
+    "binaryName": "SimpleChess",
     "resourcesPath": "/react-src/build/",
     "extensionsPath": "/extensions/",
     "binaryVersion": "6.2.0",
@@ -46,6 +46,22 @@
       "initCommand": "npm install",
       "devCommand": "npm run dev",
       "buildCommand": "npm run build"
+    }
+  },
+  "buildScript": {
+    "win": {
+      "architecture": ["x64"],
+      "appName": "SimpleChess",
+      "appIcon": "resources/icons/icon.ico"
+    },
+    "linux": {
+      "architecture": ["x64", "arm64", "armhf"],
+      "appName": "SimpleChess",
+      "appIcon": "resources/icons/appIcon.png",
+      "appPath": "/usr/share/SimpleChess",
+      "appCategories": "Game",
+      "appPublisher": "Laurent Bernabe",
+      "appCopyright": "© 2025 Laurent Bernabe"
     }
   }
 }
