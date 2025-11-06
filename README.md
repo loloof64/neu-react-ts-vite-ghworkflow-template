@@ -3,6 +3,8 @@
 A template for [NeutralinoJS](https://neutralino.js.org/), [ReactJS](https://react.dev/), [Typescript](https://www.typescriptlang.org/), and Github Workflow.
 So that you can also release you application on Github for Windows and Linux (needs manual trigger).
 
+Inspired by the project [Neutralino App Template](https://github.com/TolinSimpson/neutralinojs-build-automation-template).
+
 ## Instructions
 
 ### Install
