@@ -14,7 +14,7 @@ permissions:
 env:
   APP_NAME: "SampleApp"
   APP_BINARY_NAME: "SampleApp"
-  APP_VERSION: "0.0.2"
+  APP_VERSION: "0.0.3"
   PUBLISHER: "Laurent Bernabe"
   BUILD_AUTOMATION_PATH: "build automation"
   INSTALLER_SCRIPT: "template.iss"
@@ -178,6 +178,8 @@ jobs:
           name: linux-packages
           path: |
             dist/linux_*/*.AppImage
+            dist/linux_*/*.deb
+            dist/linux_*/*.rpm
           retention-days: 7
           if-no-files-found: error
 
