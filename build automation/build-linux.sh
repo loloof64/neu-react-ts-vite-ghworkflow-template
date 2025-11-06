@@ -362,7 +362,7 @@ EOF
     # Try to build RPM using alien (converts from DEB)
     if command -v alien >/dev/null 2>&1 && [ -f "dist/linux_${app_arch}/${APP_NAME}-${APP_VERSION}-${app_arch}.deb" ]; then
         cd "dist/linux_${app_arch}"
-        alien --to-rpm "${APP_NAME}-${APP_VERSION}-amd64.deb"
+        alien --to-rpm "${APP_NAME}-${APP_VERSION}-${app_arch}.deb"
         cd - >/dev/null
         echo "  ✓ RPM package created using alien"
     else
