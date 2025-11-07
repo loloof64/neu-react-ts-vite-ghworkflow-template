@@ -149,7 +149,7 @@ create_appimage() {
     chmod +x "${APP_DIR}/usr/bin/${APP_NAME}"
 
     # Extract dynamic libraries
-    ldd "${EXE}" | grep -E "gtk-4|glib-2.0|pango|gdk|cairo|atk|pixbuf" | grep -o '/[^ ]*\.so[^ ]*' | xargs -I {} cp {} "${APP_DIR}/usr/lib/"
+    ldd "${EXE}" | grep -E "gtk-3|glib-2.0|pango|gdk|cairo|atk|pixbuf" | grep -o '/[^ ]*\.so[^ ]*' | xargs -I {} cp {} "${APP_DIR}/usr/lib/"
     
     # Copy resources
     cp "${RES}" "${APP_DIR}/usr/bin/"

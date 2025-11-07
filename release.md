@@ -1,3 +1,3 @@
-# Set windows executable with a dynamic name
+# Add missing dynamic library to AppImage artifacts
 
-Set windows executable with a dynamic name, including version number.
+As neutralino is built with Gtk3 and not Gtk4, appimage format need this fix in order to run everywhere FUSE is supported.
