@@ -3,7 +3,7 @@
 AppName=SampleApp
 AppPublisher=Laurent Bernabe
 AppCopyright=© 2025 Laurent Bernabe
-AppVersion=0.0.7
+AppVersion=0.0.8
 DefaultDirName={commonpf}\SampleApp
 DefaultGroupName=SampleApp
 OutputBaseFilename=SampleApp-{#SetupSetting("AppVersion")}-Windows64_Installer

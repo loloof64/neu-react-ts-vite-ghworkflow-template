@@ -140,12 +140,16 @@ create_appimage() {
     
     # Create AppDir structure
     mkdir -p "${APP_DIR}/usr/bin"
+    mkdir -p "${APP_DIR}/usr/lib"
     mkdir -p "${APP_DIR}/usr/share/applications"
     mkdir -p "${APP_DIR}/usr/share/icons/hicolor/256x256/apps"
     
     # Copy executable
     cp "${EXE}" "${APP_DIR}/usr/bin/${APP_NAME}"
     chmod +x "${APP_DIR}/usr/bin/${APP_NAME}"
+
+    # Extract dynamic libraries
+    ldd "${EXE}" | grep -E "gtk-4|glib-2.0|pango|gdk|cairo|atk|pixbuf" | grep -o '/[^ ]*\.so[^ ]*' | xargs -I {} cp {} "${APP_DIR}/usr/lib/"
     
     # Copy resources
     cp "${RES}" "${APP_DIR}/usr/bin/"
